@@ -27,7 +27,7 @@ private:
 class Two
 {
 public:
-    int Callback(int a, int b)
+    int Add(int a, int b)
     {
         std::cout << __func__ << std::endl;
         return a + b;
@@ -35,7 +35,7 @@ public:
 
     Two()
     {
-        auto callback = std::bind(&Two::Callback, this, _1, _2);
+        auto callback = std::bind(&Two::Add, this, _1, _2);
         one.RegisterCallback(callback);
     }
 
