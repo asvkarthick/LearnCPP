@@ -11,6 +11,7 @@ int main(void)
     func<int>(65);
     func<char>(65);
     func(65);
+    func(65.02);
 
     return 0;
 }
